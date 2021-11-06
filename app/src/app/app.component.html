@@ -1,0 +1,119 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<h2>List of equips</h2>
+<table border="2px" bgcolor="#1e90ff">
+  <tr><th>nom</th><th>ip_address</th><th>mac_address</th>
+    <th>etat</th><th>aeroport</th><th>switch</th>
+    <th>num_port</th><th>nbre_port</th></tr>
+  <tr *ngFor="let equip of equips">
+    <th>{{equip.nom}}</th>
+ <th>{{equip.ip_add}}</th>
+    <th>{{equip.mac_add}}</th>
+   <td>{{equip.etat}}</td>
+    <td>{{equip.aeroport}}</td>
+     <td>{{equip.switch}}</td>
+     <td>{{equip.num_port}}</td>
+     <td>{{equip.nbre_port}}</td></tr>
+
+
+<!--</table>-->
+<!--<ul>-->
+<!--  <li *ngFor="let equip of equips">-->
+<!--    <h2 (click)="equipClicked(equip)">{{equip.nom}}</h2>-->
+<!--&lt;!&ndash;   <h2 (click)="equipClicked(equip)">{{equip.ip_add}}</h2>&ndash;&gt;-->
+<!--  </li>-->
+<!--</ul>-->
+
+<!--id <input type="text" [(ngModel)]="selectedEquip.id"/><br>-->
+<!--ip_add <input type="text" [(ngModel)]="selectedEquip.ip_add"/><br>-->
+<!--mac_add <input type="text" [(ngModel)]="selectedEquip.mac_add"/><br>-->
+<!--etat <input type="text" [(ngModel)]="selectedEquip.etat"/><br>-->
+<!--aeroport <input type="text" [(ngModel)]="selectedEquip.aeroport"/><br>-->
+<!--switch <input type="text" [(ngModel)]="selectedEquip.switch"/><br>-->
+<!--num_port <input type="text" [(ngModel)]="selectedEquip.num_port"/><br>-->
+<!--nbre_port <input type="text" [(ngModel)]="selectedEquip.nbre_port"/><br>-->
+<!--<button *ngIf="selectedEquip.id == ''" (click)="updateEquip()"> PUT </button>-->
+<!--<button *ngIf="selectedEquip.id == ''" (click)="createEquip()"> POST </button>-->
+<!--<button  (click)="updateEquip()"> DELETE </button>-->
+<!--<button  (click)="createEquip()" type="button"> POST </button>-->
+<!--<button  (click)="deleteEquip()" type="button"> DELETE </button>-->
+<!--<button  (click)="updateEquip()" type="button"> PUT </button>-->
+<!--<button  (click)="getEquips()" type="button"> GET </button>-->
+
+
+
+
+
+<!--<div style="padding: 20px;">-->
+<!--  <nav>-->
+<!--    <a routerlink="equip" class="btn btn-primary active" role="button">equips</a><br>-->
+<!--    <a routerlink="add" class="btn btn-primary active" role="button" routerlinkactive="active">Add</a><br>-->
+<!--    <a routerlink="findbynbre_port" class="btn btn-primary active" role="button" routerlinkactive="active">Search</a>-->
+
+
+<!--  </nav>-->
+<!--</div>-->
+<div class="container">
+    <div class="title">
+    <h1>equips Scheduler</h1>
+    </div>
+      <div class="col-lg-12 well">
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="text-left">Active equips Schedule</h4>
+        </div>
+        <div class="col-lg-12 ml-auto mr-auto">
+            <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="text-center">No.</th>
+                        <th>nom</th>
+                        <th>ip_address</th>
+                        <th>mac_address</th>
+                        <th>etat</th>
+                        <th> Airport</th>
+                        <th> switch</th>
+                        <th>numero de port</th>
+                        <th>nombre de port</th>
+                        <th class="text-right">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let equip of equips">
+                      <th>{{equip.nom}}</th>
+                      <th>{{equip.ip_add}}</th>
+                         <th>{{equip.mac_add}}</th>
+                         <td>{{equip.etat}}</td>
+                         <td>{{equip.aeroport}}</td>
+                         <td>{{equip.switch}}</td>
+                         <td>{{equip.num_port}}</td>
+                         <td>{{equip.nbre_port}}</td>
+                         <td class="td-actions text-right">
+                            <a type="button" class="btn btn-success btn-just-icon btn-sm "
+                            style="margin-left:10px;">
+                                <i class="material-icons">Edit</i>
+                            </a>
+
+                            <button type="button" rel="tooltip" class="btn btn-danger btn-just-icon btn-sm" data-original-title="" title="" style="margin-left:10px;">
+                                <i class="material-icons">Delete</i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="text-right">
+                          <button type="button" rel="tooltip" class="btn btn-danger btn-just-icon btn-lg" data-original-title="" title="" style="margin-left:10px;" >
+                              <i class="material-icons">Delete All</i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+     </div>
+  </div>
+  </div>
+</div>
+
